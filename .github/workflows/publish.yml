@@ -1,0 +1,32 @@
+name: publish docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: '0.4.10'
+
+      - run: mdbook build
+
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: book/

@@ -1,13 +1,10 @@
-name: publish docs
+name: check docs
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-20.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,9 +17,3 @@ jobs:
           mdbook-version: '0.4.10'
 
       - run: mdbook build
-
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: book/
