@@ -17,6 +17,7 @@
   - [Custom container engine](./usage/custom_engine.md)
 - [Unsupported functionality](./not_supported.md)
   - [Support matrix]()
+  - [Docker context](./missing_functionality/docker_context.md)
 - [Known issues](./known_issues/index.md)
   - [`MODULE_NOT_FOUND`](./known_issues/module_not_found.md)
 - [Integrations](./integrations.md)
