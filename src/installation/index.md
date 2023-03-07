@@ -64,7 +64,7 @@ go build -ldflags "-X main.version=$(git describe --tags --dirty --always | sed 
 - [Homebrew](./brew.md) (`Linux`, `macOS`)
 - [Chocolatey](./chocolatey.md) (`Windows`)
 - [COPR](./copr.md) (`Linux`)
-- [GitHub CLI](./gh.md) (`Linux`, `macOS`, `Windows`)
+- [GitHub CLI](./gh.md) (`Linux`, `macOS`, `Windows`, `FreeBSD`)
 - [Nix/NixOS](./nix.md) (`Linux`, `macOS`)
 - [MacPorts](./ports.md) (`macOS`)
 - [Scoop](./scoop.md) (`Windows`)
