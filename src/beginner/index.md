@@ -203,7 +203,7 @@ jobs:
 - `act --input-file my.input` - load input values from `my.input` file.
   - input file format is the same as `.env` format
 
-## via JSON
+### via JSON
 
 Example JSON payload file conveniently named `payload.json`
 
