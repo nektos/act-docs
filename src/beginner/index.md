@@ -197,7 +197,7 @@ jobs:
           echo "Hello ${{ github.event.inputs.NAME }} and ${{ github.event.inputs.SOME_VALUE }}!"
 ```
 
-## via input or input-file flag
+### via input or input-file flag
 
 - `act --input NAME=somevalue` - use `somevalue` as the value for `NAME` input.
 - `act --input-file my.input` - load input values from `my.input` file.
