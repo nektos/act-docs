@@ -1,0 +1,104 @@
+# Supported options in `act`
+
+## **This document is work in progress, there are more options supported than what is stated below**
+
+## Workflow
+
+- [x] `name`
+- [x] `on`
+  - [ ] `<event_name>.types`
+  - [ ] `<pull_request|pull_request_target>`
+    - [ ] `branches`
+    - [ ] `branches-ignore`
+  - [ ] `push`
+    - [ ] `branches`
+    - [ ] `tags`
+    - [ ] `branches-ignore`
+    - [ ] `tags-ignore`
+  - [ ] `schedule`
+  - [ ] `workflow_call`
+  - [ ] `workflow_run`
+    - [ ] `branches`
+    - [ ] `branches-ignore`
+  - [ ] `workflow_dispatch`
+- [ ] `permissions`
+- [x] `env`
+- [x] `defaults`
+  - [x] `run`
+    - [x] `shell`
+    - [x] `working-directory`
+- [ ] `concurrency`
+- [x] `jobs`
+  - [x] `<job_id>`
+    - [x] `name`
+    - [ ] `permissions`
+    - [x] `needs`
+    - [x] `if`
+    - [x] `runs-on`
+    - [ ] `environment`
+    - [ ] `concurrency`
+    - [x] `outputs`
+    - [x] `env`
+    - [x] `defaults`
+      - [x] `run`
+        - [x] `shell`
+        - [x] `working-directory`
+    - [x] `steps`
+      - [x] `id`
+      - [x] `if`
+      - [x] `name`
+      - [x] `uses`
+        - composite actions
+      - [x] `run`
+      - [x] `shell`
+      - [ ] `with`
+        - [ ] `with.args`
+        - [ ] `with.entrypoint`
+      - [x] `env`
+      - [ ] `continue-on-error`
+      - [ ] `timeout-minutes`
+    - [ ] `timeout-minutes`
+    - [x] `strategy`
+      - [x] `matrix`
+        - current matrix resolution does not match one on GHA [#981](https://github.com/nektos/act/issues/981) [#573](https://github.com/nektos/act/issues/573)
+        - [x] `fail-fast`
+          - won't actually fail fast
+        - [x] `max-parallel`
+          - incomplete support [Issue #150](https://github.com/nektos/act/issues/158)
+    - [ ] `continue-on-error`
+    - [x] `container`
+      - [x] `image`
+      - [x] `credentials`
+      - [ ] `env`
+      - [ ] `ports`
+      - [ ] `volumes`
+      - [x] `options`
+        - supports only `--hostname`
+    - [ ] `services` ([PR #775](https://github.com/nektos/act/pull/775))
+      - [ ] `<service_id>`
+        - [ ] `image`
+        - [ ] `credentials`
+        - [ ] `env`
+        - [ ] `ports`
+        - [ ] `volumes`
+        - [ ] `options`
+    - [ ] `uses`
+    - [ ] `with`
+    - [ ] `secrets`
+
+## Action
+
+- [x] `name`
+- [x] `description`
+- [x] `inputs`
+- [x] `outputs`
+- [x] `runs`
+  - [x] `using`
+    - [x] `docker`
+    - [x] `node12`
+    - [x] `node16`
+    - [x] `composite`
+  - [x] `image`
+  - [x] `main`
+  - [x] `args`
+  - [x] `steps`
