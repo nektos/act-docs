@@ -255,8 +255,8 @@ jobs:
 In this case if we only wanted to run this workflow for node 8, then we would run `act push --matrix node:8`
 
 This will trigger the workflow to use the following matrix configurations only:
-- `os: ubuntu-18.04, node 8`
-- `os: macos-latest, node 8`
+- `os: ubuntu-18.04, node: 8`
+- `os: macos-latest, node: 8`
 
 Similarly if we just wanted to trigger this workflow for node 10 and macos-latest then we would run `act push --matrix node:10 --matrix os:macos-latest`.
 
