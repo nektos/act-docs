@@ -40,7 +40,6 @@ You can unpack and run them in terminal specifying full path or add them to one 
 - [Linux 64-bit (amd64/x86_64)](https://github.com/nektos/act/releases/latest/download/act_Linux_x86_64.tar.gz)
 - [Windows 64-bit (arm64/aarch64)](https://github.com/nektos/act/releases/latest/download/act_Windows_arm64.zip)
 - [Windows 32-bit (armv7)](https://github.com/nektos/act/releases/latest/download/act_Windows_armv7.zip)
-- [Windows 32-bit (armv7)](https://github.com/nektos/act/releases/latest/download/act_Windows_armv7.zip)
 - [Windows 32-bit (i386/x86)](https://github.com/nektos/act/releases/latest/download/act_Windows_i386.zip)
 - [Windows 64-bit (amd64/x86_64)](https://github.com/nektos/act/releases/latest/download/act_Windows_x86_64.zip)
 
