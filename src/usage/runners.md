@@ -6,14 +6,21 @@ In order for `act` to run your workflows locally, it must run a container for th
 | GitHub Runner   | Micro Docker Image               | Medium Docker Image                               | Large Docker Image                                 |
 | --------------- | -------------------------------- | ------------------------------------------------- | -------------------------------------------------- |
 | `ubuntu-latest` | [`node:16-buster-slim`][micro]   | [`catthehacker/ubuntu:act-latest`][docker_images] | [`catthehacker/ubuntu:full-latest`][docker_images] |
-| `ubuntu-22.04`  | [`node:16-bullseye-slim`][micro] | [`catthehacker/ubuntu:act-22.04`][docker_images]  | `unavailable`                                      |
+| `ubuntu-22.04`  | [`node:16-bullseye-slim`][micro] | [`catthehacker/ubuntu:act-22.04`][docker_images]  | [`catthehacker/ubuntu:full-22.04`][docker_images]  |
 | `ubuntu-20.04`  | [`node:16-buster-slim`][micro]   | [`catthehacker/ubuntu:act-20.04`][docker_images]  | [`catthehacker/ubuntu:full-20.04`][docker_images]  |
 | `ubuntu-18.04`  | [`node:16-buster-slim`][micro]   | [`catthehacker/ubuntu:act-18.04`][docker_images]  | [`catthehacker/ubuntu:full-18.04`][docker_images]  |
 
 [micro]: https://hub.docker.com/_/buildpack-deps
 [docker_images]: https://github.com/catthehacker/docker_images
 
-Windows and macOS based platforms are currently **unsupported and won't work** (see issue [#97](https://github.com/nektos/act/issues/97))
+If you want to run Windows and macOS based platforms and you are running act within that specfic environment you can opt out of docker and run them directly on your host system.
+
+Here are some examples
+```sh
+act -P ubuntu-latest=-self-hosted
+act -P windows-latest=-self-hosted
+act -P macos-latest=-self-hosted
+```
 
 ## Default runners are intentionally incomplete
 
@@ -30,7 +37,7 @@ If you need an environment that works just like the corresponding GitHub runner 
 
 :warning: :elephant: `*** WARNING - this image is >18GB 😱***`
 
-- [`catthehacker/ubuntu:full-*`](https://github.com/catthehacker/docker_images/pkgs/container/ubuntu) - built from Packer template provided by GitHub, see [catthehacker/virtual-environments-fork](https://github.com/catthehacker/virtual-environments-fork) or [catthehacker/docker_images](https://github.com/catthehacker/docker_images) for more information
+- [`catthehacker/ubuntu:full-*`](https://github.com/catthehacker/docker_images/pkgs/container/ubuntu) - filesystem dump of the Runners provided by GitHub, see [`ChristopherHX/runner-image-blobs`](https://github.com/ChristopherHX/runner-image-blobs) or [`catthehacker/docker_images`](https://github.com/catthehacker/docker_images) for more information
 
 ## Use an alternative runner image
 
