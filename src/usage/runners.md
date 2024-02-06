@@ -39,7 +39,7 @@ If you need an environment that works just like the corresponding GitHub runner 
 
 - [`catthehacker/ubuntu:full-*`](https://github.com/catthehacker/docker_images/pkgs/container/ubuntu) - filesystem dump of the Runners provided by GitHub, see [`ChristopherHX/runner-image-blobs`](https://github.com/ChristopherHX/runner-image-blobs) or [`catthehacker/docker_images`](https://github.com/catthehacker/docker_images) for more information
 
-## Use an alternative runner image
+### Use an alternative runner image
 
 To use a different image for the runner, use the `-P` option.
 
@@ -58,4 +58,19 @@ For example, if your workflow uses `ubuntu-18.04`, `ubuntu-16.04` and `ubuntu-la
 
 ```sh
 act -P ubuntu-18.04=nektos/act-environments-ubuntu:18.04 -P ubuntu-latest=ubuntu:latest -P ubuntu-16.04=node:16-buster-slim
+```
+
+### Using local runner images
+
+The `--pull` flag is set to true by default due to a breaking on older default docker images. This would pull the docker image everytime act is executed.
+
+Set `--pull` to false if a local docker image is needed
+```sh
+  act --pull=false
+```
+
+Alternatively turn on offline mode
+
+```sh
+  act --action-offline-mode
 ```

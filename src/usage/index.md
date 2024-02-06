@@ -283,3 +283,23 @@ This will trigger the workflow to use the following matrix configurations only:
 - `os: macos-latest, node 10`
 
 Note that using the `--matrix` flag you can't add new values (for e.g. running the above workflow for node 20). It will simply ignore it. Moreover, the `exclude` field in the workflow will take precedance over the `--matrix` flag (for e.g. running the above workflow for only macos-latest and node 4 will result in no matrix configuration being used)
+
+## Action Offline Mode
+
+If you want to speed up running act and using cached actions and container images you can enable this mode.
+
+- stops pulling existing images
+- stops failing if an action has been cached and you cannot connect to GitHub
+- pulls non existent actions and images
+- act will work offline if it has at least ran once while you are online
+- get rid of unnecessary timeouts when you have an unstable connection to GitHub or Container registries
+- workaround rate limit problems
+
+```sh
+  act --action-offline-mode
+```
+
+or a `.actrc` file in your cwd like
+```
+--action-offline-mode
+```
