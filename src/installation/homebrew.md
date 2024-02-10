@@ -1,6 +1,6 @@
 # [Homebrew](https://brew.sh/) (Linux/macOS)
 
-[![homebrew version](https://img.shields.io/homebrew/v/act)](https://github.com/Homebrew/homebrew-core/blob/master/Formula/act.rb)
+[![homebrew version](https://img.shields.io/homebrew/v/act)](https://github.com/Homebrew/homebrew-core/blob/master/Formula/a/act.rb)
 
 ```shell
 brew install act
