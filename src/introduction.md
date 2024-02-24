@@ -1,6 +1,6 @@
 # Introduction
 
-![act-logo](https://github.com/nektos/act/wiki/img/logo-150.png)
+![act-logo](https://raw.githubusercontent.com/wiki/nektos/act/img/logo-150.png)
 
 > "Think globally, `act` locally"
 
@@ -15,4 +15,4 @@ When you run `act` it reads in your GitHub Actions from `.github/workflows/` and
 
 Let's see it in action with a [sample repo](https://github.com/cplee/github-actions-demo)!
 
-![Demo](https://github.com/nektos/act/wiki/quickstart/act-quickstart-2.gif)
+![Demo](https://raw.githubusercontent.com/wiki/nektos/act/quickstart/act-quickstart-2.gif)
