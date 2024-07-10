@@ -93,6 +93,19 @@ act -j 'test'
 
 > This example will run **all jobs** named `test` in **all workflows** that trigger on `push` event
 
+## Configuration file
+
+Act can be configuring using `.actrc` files. All found arguments will be parsed and appended to a list, in order of: .actrc as per the XDG spec, .actrc in HOME directory, .actrc in invocation directory, cli arguments.
+
+Format: One argument per line, no comments supported.
+
+Example:
+
+```
+--container-architecture=linux/amd64
+--action-offline-mode
+```
+
 # Vars
 
 To run `act` with repository variables that are acessible inside the workflow via ${{ vars.VARIABLE }}, you can enter them interactively or load them from a file. The following options are available for providing github repository variables:
