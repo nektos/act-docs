@@ -3,5 +3,5 @@
 [![aur-shield](https://img.shields.io/aur/version/act)](https://aur.archlinux.org/packages/act/)
 
 ```shell
-yay -Syu act
+yay -Sy act
 ```
