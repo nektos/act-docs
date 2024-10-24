@@ -2,7 +2,7 @@
 
 - [Introduction](./introduction.md)
 - [Installation](./installation/index.md)
-  - [AUR](./installation/aur.md)
+  - [Arch](./installation/arch.md)
   - [Chocolatey](./installation/chocolatey.md)
   - [COPR](./installation/copr.md)
   - [GitHub CLI](./installation/gh.md)

@@ -59,7 +59,7 @@ go build -ldflags "-X main.version=$(git describe --tags --dirty --always | sed 
 
 `act` is available in below package repositories
 
-- [AUR](./aur.md) (`Linux`)
+- [Arch](./arch.md) (`Linux`)
 - [Homebrew](./homebrew.md) (`Linux`, `macOS`)
 - [Chocolatey](./chocolatey.md) (`Windows`)
 - [COPR](./copr.md) (`Linux`)
