@@ -6,7 +6,6 @@ Here is a list of features that is (yet) to be implemented or is decided as not 
 
 ## Planned
 
-- Services are not supported ([#173](https://github.com/nektos/act/issues/173))
 - `concurrency` is ignored
 - `run-name` is ignored
 - Context availability is not checked, so you can use the env context on more places
