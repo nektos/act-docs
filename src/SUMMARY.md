@@ -15,6 +15,7 @@
   - [Runners](./usage/runners.md)
   - [Custom container engine](./usage/custom_engine.md)
   - [GitHub Enterprise](./usage/github_enterprise.md)
+  - [Schema](./usage/schema.md)
 - [Unsupported functionality](./not_supported.md)
   - [Support matrix]()
   - [Docker context](./missing_functionality/docker_context.md)
