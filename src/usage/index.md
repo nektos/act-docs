@@ -316,3 +316,19 @@ or a `.actrc` file in your cwd like
 ```
 --action-offline-mode
 ```
+
+## Action Artifacts
+
+**Currently is the artifacts server not started automatically with act**, this means the following env variables are blank by default.
+
+- `ACTIONS_RUNTIME_URL`
+- `ACTIONS_RUNTIME_TOKEN`
+- `ACTIONS_RESULTS_URL`
+
+to enable this feature use the cli flag `--artifact-server-path $PWD/.artifacts`.
+
+While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where their are blank.
+
+Currently `actions/upload-artifact@v3` and `actions/upload-artifact@v4` together with `actions/download-artifact@v3` and `actions/download-artifact@v4` should be able to upload and download their artifacts within the current workflow run.
+
+Not supported v4 features are to download artifacts from a different run, workflow or repository by providing a GitHub Token.
