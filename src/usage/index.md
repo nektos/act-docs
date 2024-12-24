@@ -36,7 +36,7 @@ act -l pull_request
 
 ### Using event file to provide complete event payload
 
-If your workflow relies on passed event properties, you will have to provide required properties in the event file, example:
+If your workflow relies on passed event properties, you will have to provide the required properties in the event file, example:
 
 > To partially simulate `pull_request` event, you to provide at least `head_ref` and `base_ref`. This values can be later accessed via `${{ github.event.pull_request.<...> }}`
 
@@ -65,23 +65,23 @@ If your workflow relies on passed event properties, you will have to provide req
 
 > By default `act` will run **all** workflows in `.github/workflows`.
 
-You can override that behaviour with `-W`/`--workflows` flag by specifying directory containing workflow files
+You can override that behaviour with `-W`/`--workflows` flag by specifying the directory containing workflow files.
 
 ```shell=sh
 act -W '.github/workflows/'
 ```
 
-> This example will run **all jobs** in **all workflows** in directory `.github/workflows` but only if the trigger event is `push`
+> This example will run **all jobs** in **all workflows** in the directory `.github/workflows` but only if the trigger event is `push`
 
 ---
 
-or by specifying exact workflow file to run
+or by specifying the exact workflow file to run
 
 ```shell=sh
 act -W '.github/workflows/checks.yml'
 ```
 
-> This example will run **all jobs** in `.github/workflows/checks.yml` workflow file but only if it's trigger event is `push`
+> This example will run **all jobs** in `.github/workflows/checks.yml` workflow file but only if its trigger event is `push`
 
 ## Jobs
 
@@ -95,7 +95,7 @@ act -j 'test'
 
 ## Configuration file
 
-Act can be configuring using `.actrc` files. All found arguments will be parsed and appended to a list, in order of: .actrc as per the XDG spec, .actrc in HOME directory, .actrc in invocation directory, cli arguments.
+Act can be configured using `.actrc` files. All found arguments will be parsed and appended to a list, in order of: .actrc as per the XDG spec, .actrc in HOME directory, .actrc in invocation directory, cli arguments.
 
 Format: One argument per line, no comments supported.
 
@@ -108,7 +108,7 @@ Example:
 
 # Vars
 
-To run `act` with repository variables that are acessible inside the workflow via ${{ vars.VARIABLE }}, you can enter them interactively or load them from a file. The following options are available for providing github repository variables:
+To run `act` with repository variables that are accessible inside the workflow via ${{ vars.VARIABLE }}, you can enter them interactively or load them from a file. The following options are available for providing github repository variables:
 
 - `act --var VARIABLE=somevalue` - use `somevalue` as the value for `VARIABLE`.
 - `act --var-file my.variables` - load variables values from `my.variables` file.
