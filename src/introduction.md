@@ -11,7 +11,7 @@ Run your [GitHub Actions](https://developer.github.com/actions/) locally! Why wo
 
 ---
 
-> ✨ **Now Run GitHub Actions Locally Directly From VS Code!** ✨  
+> **Now Manage and Run Act Directly From VS Code!**   
 > Check out the [GitHub Local Actions](https://sanjulaganepola.github.io/github-local-actions-docs/) Visual Studio Code extension which allows you to leverage the power of `act` to run and test workflows locally without leaving your editor.
 
 ---
