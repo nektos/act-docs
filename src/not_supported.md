@@ -10,6 +10,7 @@ Here is a list of features that is (yet) to be implemented or is decided as not 
 - `run-name` is ignored
 - Context availability is not checked, so you can use the env context on more places
 - Step summary not processed
+  - Values written in each step to the file pointed by `GITHUB_STEP_SUMMARY`, `$GITHUB_STEP_SUMMARY` and `$env:GITHUB_STEP_SUMMARY` are discarded, each step has it's own empty step summary file at the beginning
 - Problem matcher ignored
 - Annotations ignored
 - No `vars` context
