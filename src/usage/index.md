@@ -36,7 +36,7 @@ act -l pull_request
 
 ### Using event file to provide complete event payload
 
-If your workflow relies on passed event properties, you will have to provide required properties in the event file, example:
+If your workflow relies on passed event properties, you will have to provide the required properties in the event file, example:
 
 > To partially simulate `pull_request` event, you to provide at least `head_ref` and `base_ref`. This values can be later accessed via `${{ github.event.pull_request.<...> }}`
 
@@ -65,23 +65,23 @@ If your workflow relies on passed event properties, you will have to provide req
 
 > By default `act` will run **all** workflows in `.github/workflows`.
 
-You can override that behaviour with `-W`/`--workflows` flag by specifying directory containing workflow files
+You can override that behaviour with `-W`/`--workflows` flag by specifying the directory containing workflow files.
 
 ```shell=sh
 act -W '.github/workflows/'
 ```
 
-> This example will run **all jobs** in **all workflows** in directory `.github/workflows` but only if the trigger event is `push`
+> This example will run **all jobs** in **all workflows** in the directory `.github/workflows` but only if the trigger event is `push`
 
 ---
 
-or by specifying exact workflow file to run
+or by specifying the exact workflow file to run
 
 ```shell=sh
 act -W '.github/workflows/checks.yml'
 ```
 
-> This example will run **all jobs** in `.github/workflows/checks.yml` workflow file but only if it's trigger event is `push`
+> This example will run **all jobs** in `.github/workflows/checks.yml` workflow file but only if its trigger event is `push`
 
 ## Jobs
 
@@ -95,7 +95,7 @@ act -j 'test'
 
 ## Configuration file
 
-Act can be configuring using `.actrc` files. All found arguments will be parsed and appended to a list, in order of: .actrc as per the XDG spec, .actrc in HOME directory, .actrc in invocation directory, cli arguments.
+Act can be configured using `.actrc` files. All found arguments will be parsed and appended to a list, in order of: .actrc as per the XDG spec, .actrc in HOME directory, .actrc in invocation directory, cli arguments.
 
 Format: One argument per line, no comments supported.
 
@@ -316,3 +316,19 @@ or a `.actrc` file in your cwd like
 ```
 --action-offline-mode
 ```
+
+## Action Artifacts
+
+**Currently is the artifacts server not started automatically with act**, this means the following env variables are blank by default.
+
+- `ACTIONS_RUNTIME_URL`
+- `ACTIONS_RUNTIME_TOKEN`
+- `ACTIONS_RESULTS_URL`
+
+to enable this feature use the cli flag `--artifact-server-path $PWD/.artifacts`.
+
+While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where their are blank.
+
+Currently `actions/upload-artifact@v3` and `actions/upload-artifact@v4` together with `actions/download-artifact@v3` and `actions/download-artifact@v4` should be able to upload and download their artifacts within the current workflow run.
+
+Not supported v4 features are to download artifacts from a different run, workflow or repository by providing a GitHub Token.
