@@ -6,5 +6,5 @@ src = "src"
 title = "act - User Guide | Manual | Docs | Documentation"
 
 [output.html]
-git-repository-url = "https://github.com/nektos/act-docs"
-edit-url-template = "https://github.com/nektos/act-docs/edit/main/{path}"
+git-repository-url = "https://github.com/actions-oss/act-docs"
+edit-url-template = "https://github.com/actions-oss/act-docs/edit/main/{path}"
