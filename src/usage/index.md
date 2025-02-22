@@ -319,7 +319,7 @@ or a `.actrc` file in your cwd like
 
 ## Action Artifacts
 
-**Currently is the artifacts server not started automatically with act**, this means the following env variables are blank by default.
+**Currently the artifacts server is not started automatically with act**, this means the following env variables are blank by default.
 
 - `ACTIONS_RUNTIME_URL`
 - `ACTIONS_RUNTIME_TOKEN`
