@@ -2,7 +2,7 @@
 
 ## Necessary prerequisites for running `act`
 
-`act` depends on `docker` (exactly Docker Engine API) to run workflows in containers. As long you don't require container isolation, you can run selected (e.g. windows or macOS) jobs directly on your System see [Runners](../usage/runners.md). In the latter case you don't need to have docker installed or running.
+`act` depends on `docker` (exactly Docker Engine API) to run workflows in containers. As long you don't require container isolation, you can run selected (e.g. windows or macOS) jobs directly on your System, see [Runners](../usage/runners.md). In the latter case you don't need to have docker installed or running.
 
 If you are using macOS, please be sure to follow the steps outlined in [Docker Docs for how to install Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/).
 
