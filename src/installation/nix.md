@@ -1,6 +1,6 @@
 # [Nix](https://nixos.org) (Linux/macOS)
 
-[Nix recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/misc/act/default.nix)
+[Nix recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/ac/act/package.nix)
 
 Global install:
 
@@ -14,7 +14,7 @@ or through `nix-shell`:
 nix-shell -p act
 ```
 
-Using the latest [Nix command](https://nixos.wiki/wiki/Nix_command), you can run directly :
+Using the latest [Nix command](https://wiki.nixos.org/wiki/Nix_command), you can run directly :
 
 ```sh
 nix run nixpkgs#act
