@@ -38,7 +38,7 @@ act -l pull_request
 
 If your workflow relies on passed event properties, you will have to provide the required properties in the event file, example:
 
-> To partially simulate `pull_request` event, you to provide at least `head_ref` and `base_ref`. This values can be later accessed via `${{ github.event.pull_request.<...> }}`
+> To partially simulate `pull_request` event, you have to provide at least `head_ref` and `base_ref`. This values can be later accessed via `${{ github.event.pull_request.<...> }}`
 
 ```json
 {
