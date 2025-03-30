@@ -327,7 +327,7 @@ or a `.actrc` file in your cwd like
 
 to enable this feature use the cli flag `--artifact-server-path $PWD/.artifacts`.
 
-While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where their are blank.
+While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where they are blank.
 
 Currently `actions/upload-artifact@v3` and `actions/upload-artifact@v4` together with `actions/download-artifact@v3` and `actions/download-artifact@v4` should be able to upload and download their artifacts within the current workflow run.
 
