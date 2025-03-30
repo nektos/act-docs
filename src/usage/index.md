@@ -303,7 +303,7 @@ If you want to speed up running act and using cached actions and container image
 
 - stops pulling existing images
 - stops failing if an action has been cached and you cannot connect to GitHub
-- pulls non existent actions and images
+- pulls nonexistent actions and images
 - act will work offline if it has at least ran once while you are online
 - get rid of unnecessary timeouts when you have an unstable connection to GitHub or Container registries
 - workaround rate limit problems
