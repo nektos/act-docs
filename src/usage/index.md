@@ -110,7 +110,7 @@ Example:
 
 To run `act` with repository variables that are accessible inside the workflow via `${{ vars.VARIABLE }}`, you can enter them interactively or load them from a file. The following options are available for providing github repository variables:
 
-- `act --var VARIABLE=somevalue` - use `somevalue` as the value for `VARIABLE`.
+- `act --var VARIABLE=some-value` - use `some-value` as the value for `VARIABLE`.
 - `act --var-file my.variables` - load variables values from `my.variables` file.
 - The variables file format is the same as `.env` format
 
@@ -126,7 +126,7 @@ When inserting sensitive data in your terminal, it might be saved as plain text 
 
 ---
 
-- `act -s MY_SECRET=somevalue` - use `somevalue` as the value for `MY_SECRET`.
+- `act -s MY_SECRET=some-value` - use `some-value` as the value for `MY_SECRET`.
 - `act -s MY_SECRET` - check for an environment variable named `MY_SECRET` and use it if it exists. If the environment variable is not defined, prompt the user for a value. **This is recommended way of typing/pasting a secret into terminal, as `act` will provide secure input prompt for you to type/paste your secret which will not be saved in your shell history file.**
 - `act --secret-file my.secrets` - load secrets values from `my.secrets` file.
   - secrets file format is the same as `.env` format
@@ -231,7 +231,7 @@ jobs:
 
 ### via input or input-file flag
 
-- `act --input NAME=somevalue` - use `somevalue` as the value for `NAME` input.
+- `act --input NAME=some-value` - use `some-value` as the value for `NAME` input.
 - `act --input-file my.input` - load input values from `my.input` file.
   - input file format is the same as `.env` format
 
