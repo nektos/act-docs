@@ -85,7 +85,7 @@ act -W '.github/workflows/checks.yml'
 
 ## Jobs
 
-> By default `act` will run **all jobs** in **all workflows** that are triggerred by `push` event
+> By default `act` will run **all jobs** in **all workflows** that are triggered by `push` event
 
 ```shell=sh
 act -j 'test'
