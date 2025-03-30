@@ -295,7 +295,7 @@ Similarly if we just wanted to trigger this workflow for node 10 and macos-lates
 This will trigger the workflow to use the following matrix configurations only:
 - `os: macos-latest, node 10`
 
-Note that using the `--matrix` flag you can't add new values (for e.g. running the above workflow for node 20). It will simply ignore it. Moreover, the `exclude` field in the workflow will take precedance over the `--matrix` flag (for e.g. running the above workflow for only macos-latest and node 4 will result in no matrix configuration being used)
+Note that using the `--matrix` flag you can't add new values (for e.g. running the above workflow for node 20). It will simply ignore it. Moreover, the `exclude` field in the workflow will take precedence over the `--matrix` flag (for e.g. running the above workflow for only macos-latest and node 4 will result in no matrix configuration being used)
 
 ## Action Offline Mode
 
