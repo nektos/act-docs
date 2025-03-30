@@ -10,7 +10,7 @@
   - [MacPorts](./installation/macports.md)
   - [Nix](./installation/nix.md)
   - [Scoop](./installation/scoop.md)
-  - [Winget](./installation/winget.md)
+  - [WinGet](./installation/winget.md)
 - [Usage guide](./usage/index.md)
   - [Runners](./usage/runners.md)
   - [Custom container engine](./usage/custom_engine.md)

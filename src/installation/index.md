@@ -67,7 +67,7 @@ go build -ldflags "-X main.version=$(git describe --tags --dirty --always | sed 
 - [Nix/NixOS](./nix.md) (`Linux`, `macOS`)
 - [MacPorts](./macports.md) (`macOS`)
 - [Scoop](./scoop.md) (`Windows`)
-- [Winget](./winget.md) (`Windows`)
+- [WinGet](./winget.md) (`Windows`)
 
 ### Packaging status
 
