@@ -13,7 +13,7 @@ In order for `act` to run your workflows locally, it must run a container for th
 [micro]: https://hub.docker.com/_/buildpack-deps
 [docker_images]: https://github.com/catthehacker/docker_images
 
-If you want to run Windows and macOS based platforms and you are running act within that specfic environment you can opt out of docker and run them directly on your host system.
+If you want to run Windows and macOS based platforms and you are running act within that specific environment you can opt out of docker and run them directly on your host system.
 
 Here are some examples
 ```sh
@@ -62,7 +62,7 @@ act -P ubuntu-18.04=nektos/act-environments-ubuntu:18.04 -P ubuntu-latest=ubuntu
 
 ### Using local runner images
 
-The `--pull` flag is set to true by default due to a breaking on older default docker images. This would pull the docker image everytime act is executed.
+The `--pull` flag is set to true by default due to a breaking on older default docker images. This would pull the docker image every time act is executed.
 
 Set `--pull` to false if a local docker image is needed
 ```sh

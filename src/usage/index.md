@@ -85,7 +85,7 @@ act -W '.github/workflows/checks.yml'
 
 ## Jobs
 
-> By default `act` will run **all jobs** in **all workflows** that are triggerred by `push` event
+> By default `act` will run **all jobs** in **all workflows** that are triggered by `push` event
 
 ```shell=sh
 act -j 'test'
@@ -110,7 +110,7 @@ Example:
 
 To run `act` with repository variables that are accessible inside the workflow via `${{ vars.VARIABLE }}`, you can enter them interactively or load them from a file. The following options are available for providing github repository variables:
 
-- `act --var VARIABLE=somevalue` - use `somevalue` as the value for `VARIABLE`.
+- `act --var VARIABLE=some-value` - use `some-value` as the value for `VARIABLE`.
 - `act --var-file my.variables` - load variables values from `my.variables` file.
 - The variables file format is the same as `.env` format
 
@@ -126,7 +126,7 @@ When inserting sensitive data in your terminal, it might be saved as plain text 
 
 ---
 
-- `act -s MY_SECRET=somevalue` - use `somevalue` as the value for `MY_SECRET`.
+- `act -s MY_SECRET=some-value` - use `some-value` as the value for `MY_SECRET`.
 - `act -s MY_SECRET` - check for an environment variable named `MY_SECRET` and use it if it exists. If the environment variable is not defined, prompt the user for a value. **This is recommended way of typing/pasting a secret into terminal, as `act` will provide secure input prompt for you to type/paste your secret which will not be saved in your shell history file.**
 - `act --secret-file my.secrets` - load secrets values from `my.secrets` file.
   - secrets file format is the same as `.env` format
@@ -139,7 +139,7 @@ If your workflow depends on this token, you need to create a [personal access to
 act -s GITHUB_TOKEN=[insert token or leave blank and omit equals for secure input]
 ```
 
-If [GitHub CLI](https://cli.github.com/) is installed, the [`gh auth token`](https://cli.github.com/manual/gh_auth_token) command can be used to autmatically pass the token to act
+If [GitHub CLI](https://cli.github.com/) is installed, the [`gh auth token`](https://cli.github.com/manual/gh_auth_token) command can be used to automatically pass the token to act
 
 ```bash
 act -s GITHUB_TOKEN="$(gh auth token)"
@@ -231,7 +231,7 @@ jobs:
 
 ### via input or input-file flag
 
-- `act --input NAME=somevalue` - use `somevalue` as the value for `NAME` input.
+- `act --input NAME=some-value` - use `some-value` as the value for `NAME` input.
 - `act --input-file my.input` - load input values from `my.input` file.
   - input file format is the same as `.env` format
 
@@ -295,7 +295,7 @@ Similarly if we just wanted to trigger this workflow for node 10 and macos-lates
 This will trigger the workflow to use the following matrix configurations only:
 - `os: macos-latest, node 10`
 
-Note that using the `--matrix` flag you can't add new values (for e.g. running the above workflow for node 20). It will simply ignore it. Moreover, the `exclude` field in the workflow will take precedance over the `--matrix` flag (for e.g. running the above workflow for only macos-latest and node 4 will result in no matrix configuration being used)
+Note that using the `--matrix` flag you can't add new values (for e.g. running the above workflow for node 20). It will simply ignore it. Moreover, the `exclude` field in the workflow will take precedence over the `--matrix` flag (for e.g. running the above workflow for only macos-latest and node 4 will result in no matrix configuration being used)
 
 ## Action Offline Mode
 
@@ -303,10 +303,10 @@ If you want to speed up running act and using cached actions and container image
 
 - stops pulling existing images
 - stops failing if an action has been cached and you cannot connect to GitHub
-- pulls non existent actions and images
+- pulls nonexistent actions and images
 - act will work offline if it has at least ran once while you are online
 - get rid of unnecessary timeouts when you have an unstable connection to GitHub or Container registries
-- workaround rate limit problems
+- work around rate limit problems
 
 ```sh
   act --action-offline-mode
@@ -327,7 +327,7 @@ or a `.actrc` file in your cwd like
 
 to enable this feature use the cli flag `--artifact-server-path $PWD/.artifacts`.
 
-While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where their are blank.
+While enabled these values are also available in `run` steps, which doesn't match `actions/runner` aka GitHub Actions where they are blank.
 
 Currently `actions/upload-artifact@v3` and `actions/upload-artifact@v4` together with `actions/download-artifact@v3` and `actions/download-artifact@v4` should be able to upload and download their artifacts within the current workflow run.
 

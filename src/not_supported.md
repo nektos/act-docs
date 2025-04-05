@@ -9,7 +9,7 @@ Here is a list of features that is (yet) to be implemented or is decided as not 
 - `concurrency` is ignored
 - `run-name` is ignored
 - Step summary not processed
-  - Values written in each step to the file pointed by `GITHUB_STEP_SUMMARY`, `$GITHUB_STEP_SUMMARY` and `$env:GITHUB_STEP_SUMMARY` are discarded, each step has it's own empty step summary file at the beginning
+  - Values written in each step to the file pointed by `GITHUB_STEP_SUMMARY`, `$GITHUB_STEP_SUMMARY` and `$env:GITHUB_STEP_SUMMARY` are discarded, each step has its own empty step summary file at the beginning
 - Problem matcher ignored
 - Annotations ignored
 - Incomplete `github` context
