@@ -164,43 +164,25 @@ To see more examples, go to <https://github.com/joho/godotenv/tree/v1.4.0/fixtur
 
 ## Skipping jobs
 
-You cannot use the `env` context in job level if conditions, but you can add a custom event property to the `github` context. You can use this method also on step level if conditions.
+You can take advantage of the github.actor context property, which is normally the user who initiated the workflow. Act sets this to 'nektos/act'.
 
 ```yml
 on: push
 jobs:
   deploy:
-    if: ${{ !github.event.act }} # skip during local actions testing
+    if: ${{ github.actor != 'nektos/act' }} # skip during local actions testing
     runs-on: ubuntu-latest
     steps:
     - run: exit 0
 ```
 
-And use this `event.json` file with act otherwise the Job will run:
-
-```json
-{
-    "act": true
-}
-```
-
-Run act like
-
-```sh
-act -e event.json
-```
-
-_Hint: you can add / append `-e event.json` as a line into `./.actrc`_
-
 ## Skipping steps
 
-Act adds a special environment variable `ACT` that can be used to skip a step that you
-don't want to run locally. E.g. a step that posts a Slack message or bumps a version number.
-**You cannot use this method in job level if conditions, see [Skipping jobs](#skipping-jobs)**
+You can do the same thing as with skipping jobs.
 
 ```yml
 - name: Some step
-  if: ${{ !env.ACT }}
+  if: ${{ github.actor != 'nektos/act' }}
   run: |
     ...
 ```
